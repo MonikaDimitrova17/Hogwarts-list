@@ -1,0 +1,243 @@
+.hide {
+  display: none;
+}
+
+@font-face {
+  font-family: harrypotter;
+  src: url(MagicSchoolOne.ttf);
+}
+
+@font-face {
+  font-family: dum;
+  src: url(dum1.ttf);
+}
+
+
+body {
+  background-image: url(/images/nicola-mancone-new-version5684.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  -webkit-background-size:cover;
+  -moz-background-size:cover;
+  -o-background-size:cover;
+  background-size: cover;
+
+}
+
+
+.head-img-wrap img {
+  margin: 0 auto;
+  display: block;
+  max-width: 100%;
+}
+h1 {
+  font-family: harrypotter;
+  text-align: center;
+  margin-top: 0;
+  font-size: 100px;
+  color: #000;
+  margin-top: 1em;
+  
+}
+
+h2 {
+  font-family: harrypotter;
+  font-size: 50px;
+  text-align: center;
+  color: #000;
+}
+
+.interactive{
+  margin-left: 10em;
+}
+
+select,
+button {
+  background-color: black;
+  color: white;
+  border:  solid rgb(29, 231, 97);
+  padding: 15px 9px;
+  cursor: pointer;
+  margin: 0 2px;
+  outline: none;
+}
+button:hover,
+select:hover {
+  background-color: white;
+  color: black;
+}
+
+button:disabled {
+  background-color: rgb(95, 13, 13);
+  cursor: default;
+  color: white;
+  border: none;
+}
+ul {
+  list-style-image: url("images/harry-potter.png");
+  
+}
+li {
+  cursor:url(images/magician.png), pointer;
+  margin: 10px;
+  font-family: dum;
+  border-bottom: solid black;
+  transition: 0.2s;
+  font-size: 30px;
+}
+
+li:hover {
+  color: rgb(255, 255, 255);
+  border-bottom: solid rgb(29, 231, 97);
+  border-radius: 10px;
+}
+
+li h3.first-name,
+li h3.last-name {
+  display: inline;
+}
+li > h3.house {
+  margin-bottom: 10px;
+}
+li > h3 {
+  pointer-events: none;
+}
+
+.bg-modal {
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 10;
+}
+
+.modal-content {
+  max-height: 100%;
+  max-width: 100%;
+  margin: 10% 10%;
+  padding: 1em 2em;
+  padding-top: 2em;
+  position: relative;
+}
+
+#close {
+  border: none;
+  color: white;
+  background-color: rgb(243, 43, 43);
+  cursor: pointer;
+  font-size: 20px;
+  margin: 0;
+  border-radius: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30px;
+  height: 30px;
+}
+
+#close:hover {
+  color: rgb(0, 0, 0);
+  background-color: darkred;
+}
+
+div.wrap-crest > img {
+  max-width: 100%;
+  
+}
+
+.modalImages {
+  display: grid;
+  grid-template-columns: 108px 108px;
+  grid-gap: 1em;
+}
+
+.data > h3 {
+  margin: 17px 0;
+  font-family: dum;
+  font-size: 30px;
+ 
+}
+
+.modal-inter {
+  padding: 10px;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.4);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-row-gap: 10px;
+  grid-template-areas:
+    "expell prefect"
+    "inquisitorial inquisitorial";
+}
+h5 {
+  font-family: toxia;
+  font-size: 20px;
+  margin: 20px 0;
+  color: red;
+  transform: rotate(-5deg);
+}
+
+#expellButton {
+  grid-area: expell;
+}
+
+#expellButton:hover{
+  background-color: darkred;
+}
+#prefectButton {
+  grid-area: prefect;
+}
+#prefectButton:hover{
+  background-color: #ecb939;
+}
+#prefectRevokeButton {
+  grid-area: prefect;
+}
+#prefectRevokeButton:hover{
+  background-color: #ecb939;
+}
+#inquisitorialButton {
+  grid-area: inquisitorial;
+}
+#inquisitorialButton:hover{
+  background-color: #f91313;
+}
+
+#inquisitorialRevokeButton {
+  grid-area: inquisitorial;
+}
+#inquisitorialRevokeButton:hover{
+  background-color: #f91313;
+}
+@media only screen and (min-width: 1024px) {
+  main {
+    margin: 0 25%;
+  }
+
+  .modal-content {
+    margin: 10% 25%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "images details" "buttons details";
+    grid-column-gap: 10%;
+  }
+  .modalImages {
+    grid-area: images;
+    margin: 0 auto;
+  }
+  .modal-inter {
+    grid-area: buttons;
+  }
+  .data {
+    grid-area: details;
+    margin: 0 auto;
+  }
+  button,
+  select {
+    font-size: 15px;
+  }
+}
